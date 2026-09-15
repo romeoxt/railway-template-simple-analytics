@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Simple Analytics">
+  <rect width="128" height="128" rx="24" fill="#1a1612"/>
+  <rect x="28" y="72" width="14" height="32" rx="2" fill="#b8432f"/>
+  <rect x="48" y="56" width="14" height="48" rx="2" fill="#c9b9a6"/>
+  <rect x="68" y="40" width="14" height="64" rx="2" fill="#b8432f"/>
+  <rect x="88" y="64" width="14" height="40" rx="2" fill="#c9b9a6"/>
+</svg>

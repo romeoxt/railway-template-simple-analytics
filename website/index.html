@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Simple Analytics on Railway — FastAPI analytics you own the code for. Embed script, Postgres storage, password dashboard." />
+  <meta property="og:title" content="Simple Analytics on Railway" />
+  <meta property="og:description" content="Self-hosted page analytics you can fork — not another Umami Docker clone." />
+  <title>Simple Analytics on Railway — analytics you own the code for</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header band">
+    <div class="band-inner header-inner">
+      <a class="logo" href="#">Simple Analytics</a>
+      <nav aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#dashboard">Who it's for</a>
+        <a href="#compare">Why this</a>
+        <a href="#deploy">Deploy</a>
+      </nav>
+      <a class="btn btn-small btn-ghost" href="https://github.com/romeoxt/railway-template-simple-analytics" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero band">
+      <div class="band-inner hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Analytics you own the code for · FastAPI · PostgreSQL</p>
+          <h1>See which pages people actually read on your site.</h1>
+          <p class="lede">Not another Umami Docker deploy — a small FastAPI app you can fork. Embed one script, store events in Postgres, open a password-protected dashboard. Built for developers who want analytics without giving up control.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://simple-analytics-production.up.railway.app/health" rel="noopener">View live demo</a>
+            <a class="btn btn-ghost" href="https://github.com/romeoxt/railway-template-simple-analytics" rel="noopener">Read the template</a>
+          </div>
+        </div>
+        <figure class="hero-panel" aria-labelledby="preview-caption">
+          <figcaption id="preview-caption" class="visually-hidden">Example analytics dashboard showing weekly page views</figcaption>
+          <div class="panel-top">
+            <span>Last 7 days</span>
+            <strong>1,284</strong>
+          </div>
+          <dl class="panel-stats">
+            <div><dt>/docs/getting-started</dt><dd>412</dd></div>
+            <div><dt>/pricing</dt><dd>318</dd></div>
+            <div><dt>/blog/hello-world</dt><dd>201</dd></div>
+          </dl>
+          <p class="panel-note">Representative layout — your numbers come from Postgres.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="how" class="how band">
+      <div class="band-inner">
+        <div class="section-intro">
+          <h2>Three steps. No SDK required.</h2>
+          <p>Install the Railway template, paste one line of HTML, open your dashboard when you are curious.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Deploy the template</h3>
+            <p>Railway provisions the app and PostgreSQL. Set a dashboard password and you are done with infrastructure.</p>
+          </li>
+          <li>
+            <h3>Add the script</h3>
+            <pre class="code"><code>&lt;script src="https://your-app.up.railway.app/script.js" defer&gt;&lt;/script&gt;</code></pre>
+          </li>
+          <li>
+            <h3>Check the dashboard</h3>
+            <p>Visit <code>/dashboard?key=YOUR_PASSWORD</code> for top pages and referrers from the past week.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="dashboard" class="audience band">
+      <div class="band-inner split">
+        <div>
+          <h2>Built for people who ship small things</h2>
+          <p>If you run a personal site, a weekend SaaS, or a client landing page, you probably do not need enterprise analytics on day one. You need to know whether anyone found your docs and which blog post got traction.</p>
+          <ul class="plain-list">
+            <li>Portfolio and personal sites</li>
+            <li>Indie side projects before Product Hunt</li>
+            <li>Internal tools with a public marketing page</li>
+            <li>MVPs where Google Analytics feels like overkill</li>
+          </ul>
+        </div>
+        <aside class="callout">
+          <h3>Honest limits</h3>
+          <p>No funnels, session replay, or ad attribution. If you outgrow it, export from Postgres or move to Umami.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="compare" class="compare band">
+      <div class="band-inner compare-grid">
+        <div>
+          <h2>Why deploy this instead of Umami #47?</h2>
+          <p>Umami dominates Railway Analytics. This template is for developers who want to read the source, change the schema, and ship analytics without maintaining a Docker fork.</p>
+        </div>
+        <table class="compare-table">
+          <thead>
+            <tr><th scope="col"></th><th scope="col">Simple Analytics</th><th scope="col">Typical Umami deploy</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">You own the code</th><td>FastAPI repo</td><td>Docker image only</td></tr>
+            <tr><th scope="row">Services</th><td>App + Postgres</td><td>Umami + Postgres</td></tr>
+            <tr><th scope="row">Funnels / events</th><td>No (by design)</td><td>Basic</td></tr>
+            <tr><th scope="row">Complexity</th><td>Minimal</td><td>Low</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="deploy" class="deploy band">
+      <div class="band-inner deploy-inner">
+        <div>
+          <h2>Deploy the template on Railway</h2>
+          <p>Railpack config, health checks, and a plain README included. Fastest path from zero to a working dashboard.</p>
+        </div>
+        <div class="deploy-actions">
+          <a class="btn btn-light" href="https://railway.com/new" rel="noopener">Deploy on Railway</a>
+          <a class="btn btn-ghost-light" href="https://github.com/romeoxt/railway-template-simple-analytics" rel="noopener">Open repository</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer band">
+    <div class="band-inner footer-inner">
+      <p>Template by <a href="mailto:herbylegall9@gmail.com">romeoxt</a> · MIT license</p>
+      <p><a href="https://railway.com" rel="noopener">Railway</a> hosts the stack · you own the data</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
